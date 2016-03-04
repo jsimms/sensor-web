@@ -1,0 +1,22 @@
+body {
+    background-color: #eee;
+}
+
+.dashcontent { 
+    padding-top: 60px;
+} 
+
+
+#empty {
+    text-align: center;
+}
+
+
+/* Forms  */
+
+
+.form-group {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
