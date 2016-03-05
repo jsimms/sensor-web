@@ -10,21 +10,30 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+        <!-- Custom CSS for this page --> 
+        <link href="css/dash.css" rel="stylesheet">
+        
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
+    
+        
+          
     </head>
     <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+
+    <div class="container">
+
+        
+        
+    <!-- Navigation --> 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -32,61 +41,122 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
       </div>
-    </nav>
+    </nav>        
+        
+        
+    <!-- Dashboard Content --> 
+        
+    <div class="dashcontent">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group" id="sidebar">
+              <a href="#" class="list-group-item">Device Management</a>
+              <a href="#" class="list-group-item">Account Settings</a>
+              <a href="#" class="list-group-item">Calendar Sync</a>
+            </div>
+            </div>
+            <div class="col-md-9">
+              <h2>Device Management</h2>
+                <p>Change plants or remove devices</p>
+              <table class="table table-hover">
+                <tr>
+                    <td>Device Type 1</td>
+                    <td>ID: 636FooBaz</td>
+                    <td>Plant: Horace Plant</td>
+                    <td><button type="button" class="btn btn-warning btn-small">Update Plant</button></td>
+                    <td><button type="button" class="btn btn-danger btn-small">Remove</button></td>
+                </tr>  
+                <tr>
+                    <td>Device Type 2</td>
+                    <td>ID: 1700Nuclear</td>
+                    <td>Plant: Scottie Pepper</td>
+                    <td><button type="button" class="btn btn-warning btn-small">Update Plant</button></td>
+                    <td><button type="button" class="btn btn-danger btn-small">Remove</button></td>
+                </tr>  
+                <tr>
+                    <td>Device Type 3</td>
+                    <td>ID: 36Foreva</td>
+                    <td>Plant: Da Berries</td>
+                    <td><button type="button" class="btn btn-warning btn-small">Update Plant</button></td>
+                    <td><button type="button" class="btn btn-danger btn-small">Remove</button></td>
+                </tr>  
+              </table>
+                   
+              <button type="button" class="btn btn-primary">Find New Devices</button>
+                
+              <hr class="col-md-12">
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
+              <h2>Account Settings</h2>
+              <p>All the things for setting your account</p>
+            
+                
+              <div>
+                  <label for="timezone">Your Timezone</label>    
+                  <select class="form-control" id="timezone">
+                      <option>EST</option>
+                      <option>CST</option>
+                      <option>MNT</option>
+                      <option>PST</option>
+                      <option>Hawaii or something</option>
+                  </select>
+                  
+                
+                <label for="cf">Temp Type</label>  
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="cf" id="cf1" value="option1" checked>
+                    Celcius
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="cf" id="cf2" value="option2">
+                    Farenheit
+                  </label>
+                </div>  
+                  
+                  
+                  <strong>Password</strong>
+                 <button type="button" class="btn btn-link">Change Password</button>
+                       
+                  
+              </div>
+
+            
+                
+               <hr class="col-md-12">
+
+              <h2>Calendar Sync</h2>
+              <p>Manage your Google Calendar account.</p>
+            
+              <p>Logged in as: foo@bar.com
+              <button class="btn" contenteditable="false">Unsync Account</button>
+            </div>
+            <div class="span9"></div>
+        </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
 
-      <hr>
+            
+            
+        
+    
+        
+        
+          
+        
+    </div> <!-- /container -->    
+        
+        
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
     </body>
 </html>
